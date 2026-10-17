@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="greeting" aria-label="Greeting Widget">
+        <p id="greeting-message"></p>
+        <p id="greeting-time" aria-live="polite"></p>
+        <p id="greeting-date"></p>
+      </section>
+
+      <section id="focus-timer" aria-label="Focus Timer Widget">
+        <h2>Focus Timer</h2>
+        <div id="timer-display" class="timer-display" aria-live="polite" aria-atomic="true">25:00</div>
+        <p id="timer-complete-msg" class="timer-complete-msg" aria-live="assertive" hidden>Session complete!</p>
+        <div class="timer-controls">
+          <button id="timer-start" type="button" aria-label="Start timer">Start</button>
+          <button id="timer-stop"  type="button" aria-label="Stop timer" disabled>Stop</button>
+          <button id="timer-reset" type="button" aria-label="Reset timer">Reset</button>
+        </div>
+      </section>
+
+      <section id="todo-list" aria-label="To-Do List Widget">
+        <!-- TodoListWidget renders here -->
+      </section>
+
+      <section id="quick-links" aria-label="Quick Links Widget">
+        <!-- QuickLinksWidget renders here -->
+      </section>
+    </main>
+
+    <script defer src="js/app.js"></script>
+  </body>
+</html>

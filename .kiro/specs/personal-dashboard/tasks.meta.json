@@ -1,0 +1,238 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Scaffold project structure and HTML skeleton": [
+      {
+        "executionId": "d38485af-2384-4b4b-961e-566d5ad6098e",
+        "chatSessionId": "sess_43f27349-c25e-4910-a635-c65603887a0a",
+        "timestamp": 1792178692278
+      },
+      {
+        "executionId": "d38485af-2384-4b4b-961e-566d5ad6098e",
+        "chatSessionId": "sess_43f27349-c25e-4910-a635-c65603887a0a",
+        "timestamp": 1792178830526
+      }
+    ],
+    "2.1 Write the `StorageService` module in `js/app.js`": [
+      {
+        "executionId": "edceeddf-c3d1-4178-a273-1e4b5130c752",
+        "chatSessionId": "sess_0154841b-3741-43f3-99a9-52b7ea434310",
+        "timestamp": 1792178904741
+      },
+      {
+        "executionId": "edceeddf-c3d1-4178-a273-1e4b5130c752",
+        "chatSessionId": "sess_0154841b-3741-43f3-99a9-52b7ea434310",
+        "timestamp": 1792179044538
+      }
+    ],
+    "2. Implement StorageService": [
+      {
+        "executionId": "edceeddf-c3d1-4178-a273-1e4b5130c752",
+        "chatSessionId": "sess_0154841b-3741-43f3-99a9-52b7ea434310",
+        "timestamp": 1792179045104
+      }
+    ],
+    "3.1 Write the `GreetingWidget` module in `js/app.js`": [
+      {
+        "executionId": "15123444-4f52-402b-8c7b-f7fdbc6c1b8d",
+        "chatSessionId": "sess_0a047cce-ee56-4ed6-bce2-3b2aff5312c5",
+        "timestamp": 1792179106643
+      },
+      {
+        "executionId": "15123444-4f52-402b-8c7b-f7fdbc6c1b8d",
+        "chatSessionId": "sess_0a047cce-ee56-4ed6-bce2-3b2aff5312c5",
+        "timestamp": 1792179226608
+      },
+      {
+        "executionId": "8f4f9d00-64f6-4d4a-899e-c50afc05ba7e",
+        "chatSessionId": "sess_98512fa4-7ae8-4926-b24b-9e0aadcc3510",
+        "timestamp": 1792179237106
+      },
+      {
+        "executionId": "8f4f9d00-64f6-4d4a-899e-c50afc05ba7e",
+        "chatSessionId": "sess_98512fa4-7ae8-4926-b24b-9e0aadcc3510",
+        "timestamp": 1792179262949
+      }
+    ],
+    "3. Implement GreetingWidget": [
+      {
+        "executionId": "15123444-4f52-402b-8c7b-f7fdbc6c1b8d",
+        "chatSessionId": "sess_0a047cce-ee56-4ed6-bce2-3b2aff5312c5",
+        "timestamp": 1792179227027
+      }
+    ],
+    "4.1 Write the `FocusTimerWidget` module in `js/app.js`": [
+      {
+        "executionId": "b7c9efe7-6484-4199-b13a-4b17a07bd166",
+        "chatSessionId": "sess_dea1345b-4110-4fd7-8901-f2a9bc15234e",
+        "timestamp": 1792179284727
+      },
+      {
+        "executionId": "b7c9efe7-6484-4199-b13a-4b17a07bd166",
+        "chatSessionId": "sess_dea1345b-4110-4fd7-8901-f2a9bc15234e",
+        "timestamp": 1792179384503
+      },
+      {
+        "executionId": "2f35d252-c07b-4b91-be19-268042555cd9",
+        "chatSessionId": "sess_f387a714-309c-4bb4-80b3-b5c84be8d1b7",
+        "timestamp": 1792179394144
+      },
+      {
+        "executionId": "2f35d252-c07b-4b91-be19-268042555cd9",
+        "chatSessionId": "sess_f387a714-309c-4bb4-80b3-b5c84be8d1b7",
+        "timestamp": 1792179406438
+      }
+    ],
+    "4. Implement FocusTimerWidget": [
+      {
+        "executionId": "b7c9efe7-6484-4199-b13a-4b17a07bd166",
+        "chatSessionId": "sess_dea1345b-4110-4fd7-8901-f2a9bc15234e",
+        "timestamp": 1792179384916
+      }
+    ],
+    "5.1 Write the `TodoListWidget` module in `js/app.js`": [
+      {
+        "executionId": "2170bd92-491a-4411-9ee7-aa48d6725b52",
+        "chatSessionId": "sess_0b325e04-0b42-4cd9-bb60-c5f589d109be",
+        "timestamp": 1792179437843
+      },
+      {
+        "executionId": "2170bd92-491a-4411-9ee7-aa48d6725b52",
+        "chatSessionId": "sess_0b325e04-0b42-4cd9-bb60-c5f589d109be",
+        "timestamp": 1792179626808
+      }
+    ],
+    "5. Implement TodoListWidget": [
+      {
+        "executionId": "2170bd92-491a-4411-9ee7-aa48d6725b52",
+        "chatSessionId": "sess_0b325e04-0b42-4cd9-bb60-c5f589d109be",
+        "timestamp": 1792179627307
+      }
+    ],
+    "6. Checkpoint — core widgets": [
+      {
+        "executionId": "9dddb21b-22c6-4f4a-b354-13e9fa6fa4d7",
+        "chatSessionId": "sess_de868da0-6738-42b9-8160-ba776a781de4",
+        "timestamp": 1792179686946
+      },
+      {
+        "executionId": "9dddb21b-22c6-4f4a-b354-13e9fa6fa4d7",
+        "chatSessionId": "sess_de868da0-6738-42b9-8160-ba776a781de4",
+        "timestamp": 1792179770158
+      }
+    ],
+    "7.1 Write the `QuickLinksWidget` module in `js/app.js`": [
+      {
+        "executionId": "f0d18188-179a-4fd0-b85c-9bef73620cfb",
+        "chatSessionId": "sess_3f35abb9-994d-4aba-8e75-4cebab193e28",
+        "timestamp": 1792179798312
+      },
+      {
+        "executionId": "f0d18188-179a-4fd0-b85c-9bef73620cfb",
+        "chatSessionId": "sess_3f35abb9-994d-4aba-8e75-4cebab193e28",
+        "timestamp": 1792179982685
+      },
+      {
+        "executionId": "b244fd7a-ae06-4da0-abb3-769b5adac9e4",
+        "chatSessionId": "sess_909ff872-57ff-4532-9007-168326e6f421",
+        "timestamp": 1792179997491
+      },
+      {
+        "executionId": "b244fd7a-ae06-4da0-abb3-769b5adac9e4",
+        "chatSessionId": "sess_909ff872-57ff-4532-9007-168326e6f421",
+        "timestamp": 1792180014121
+      }
+    ],
+    "7. Implement QuickLinksWidget": [
+      {
+        "executionId": "f0d18188-179a-4fd0-b85c-9bef73620cfb",
+        "chatSessionId": "sess_3f35abb9-994d-4aba-8e75-4cebab193e28",
+        "timestamp": 1792179983124
+      }
+    ],
+    "8.1 Add `DOMContentLoaded` bootstrap in `js/app.js`": [
+      {
+        "executionId": "5ec25cd8-a1ab-4d58-89c9-e70ae00a2bd5",
+        "chatSessionId": "sess_29474caf-6934-40e8-825b-8295ca3952fd",
+        "timestamp": 1792180043258
+      },
+      {
+        "executionId": "5ec25cd8-a1ab-4d58-89c9-e70ae00a2bd5",
+        "chatSessionId": "sess_29474caf-6934-40e8-825b-8295ca3952fd",
+        "timestamp": 1792181024214
+      }
+    ],
+    "8. Wire app bootstrap and data persistence": [
+      {
+        "executionId": "5ec25cd8-a1ab-4d58-89c9-e70ae00a2bd5",
+        "chatSessionId": "sess_29474caf-6934-40e8-825b-8295ca3952fd",
+        "timestamp": 1792181024663
+      }
+    ],
+    "9.1 Write all styles in `css/style.css`": [
+      {
+        "executionId": "b07366da-d00a-4a8b-a3aa-66ed7f08c290",
+        "chatSessionId": "sess_32bd1d06-3a82-4a8a-bca1-ae22263a7d56",
+        "timestamp": 1792181074546
+      },
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204410472
+      },
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204537191
+      },
+      {
+        "executionId": "7ec6e14e-fb91-43af-88af-75e9def0bb84",
+        "chatSessionId": "sess_9de1a660-c738-4214-9179-9153972ba395",
+        "timestamp": 1792204674780
+      }
+    ],
+    "11. Final checkpoint — full integration": [
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204174452
+      },
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204564577
+      },
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204660422
+      }
+    ],
+    "10.1 Set up fast-check test harness": [
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204183718
+      },
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204402267
+      }
+    ],
+    "10. Set up property-based test harness and write unit tests": [
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204402796
+      }
+    ],
+    "9. Implement CSS layout and visual styles": [
+      {
+        "executionId": "6a499ede-ad7c-49cc-9781-bfe1622c3fb3",
+        "chatSessionId": "sess_afd2ba07-40aa-41d8-89e9-7741049a2a08",
+        "timestamp": 1792204537614
+      }
+    ]
+  }
+}

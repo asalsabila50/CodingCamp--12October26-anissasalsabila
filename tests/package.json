@@ -1,0 +1,12 @@
+{
+  "name": "personal-dashboard-tests",
+  "version": "1.0.0",
+  "description": "Property-based and unit tests for personal-dashboard pure functions",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node run-tests.js"
+  },
+  "devDependencies": {
+    "fast-check": "^3.23.2"
+  }
+}

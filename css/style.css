@@ -1,0 +1,564 @@
+/* ============================================================
+   Personal Dashboard — Global Styles
+   Single CSS file — no inline styles, no extra sheets (Req 6.4)
+   ============================================================ */
+
+/* ── Reset ──────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ──────────────────────────────────────────────── */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+/* ── Universal focus indicator — catch-all (Accessibility) ── */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Dashboard grid  (Req 6.1, 6.2)
+   - ≥ 1024px : 4 columns
+   - 768px – 1023px : 2 columns
+   - < 768px : 1 column (single-column stack)
+   ============================================================ */
+
+main {
+  display: grid;
+  /* Default: 2 columns for screens 768 px – 1023 px */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 4 columns on wide viewports (Req 6.1) */
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Single-column stack below 768 px (Req 6.2) */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Widget card base  (Req 6.3)
+   - min-height: 100px
+   - max-height: 600px
+   ============================================================ */
+
+main > section {
+  background: #1a1d2e;
+  border: 1px solid #2d3148;
+  border-radius: 12px;
+  padding: 1.25rem;
+  min-height: 100px;   /* Req 6.3 */
+  max-height: 600px;   /* Req 6.3 */
+  overflow-y: auto;
+}
+
+main > section h2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7c8db5;
+  margin-bottom: 1rem;
+}
+
+/* Custom scrollbar for overflowing widget cards */
+main > section::-webkit-scrollbar {
+  width: 6px;
+}
+main > section::-webkit-scrollbar-track {
+  background: transparent;
+}
+main > section::-webkit-scrollbar-thumb {
+  background: #2d3148;
+  border-radius: 3px;
+}
+main > section::-webkit-scrollbar-thumb:hover {
+  background: #3d4280;
+}
+
+/* ============================================================
+   Global error banner  (Req 5.6)
+   ============================================================ */
+
+.error-banner {
+  background: #4a1c1c;
+  border: 1px solid #c53030;
+  color: #feb2b2;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+}
+
+/* ============================================================
+   Widget fallback placeholder  (Req 6.7)
+   ============================================================ */
+
+.widget-fallback {
+  color: #7c8db5;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ============================================================
+   Greeting Widget  (#greeting)
+   ============================================================ */
+
+#greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+#greeting-message {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+#greeting-time {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f1f5f9;
+  line-height: 1;
+  margin: 0.25rem 0;
+  /* Tabular nums prevent layout shifts as digits change */
+  font-variant-numeric: tabular-nums;
+}
+
+#greeting-date {
+  font-size: 0.875rem;
+  color: #7c8db5;
+}
+
+/* ============================================================
+   Focus Timer Widget  (#focus-timer)
+   ============================================================ */
+
+#focus-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Timer countdown display */
+.timer-display {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f1f5f9;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* ── COMPLETE state (Req 2.6) ──────────────────────────────
+   Visually distinct from the active countdown:
+     1. Color changes to green
+     2. Text glow / shadow reinforces the state change
+   The "Session complete!" text indicator is the
+   #timer-complete-msg element shown by JS. ──────────────── */
+.timer-display.timer--complete {
+  color: #68d391;
+  text-shadow: 0 0 16px rgba(104, 211, 145, 0.45);
+}
+
+/* "Session complete!" text indicator (Req 2.6) */
+.timer-complete-msg {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #68d391;
+  text-align: center;
+  animation: pulse-complete 2s ease-in-out infinite;
+}
+
+/* Suppress animation while element is hidden */
+.timer-complete-msg[hidden] {
+  animation: none;
+}
+
+@keyframes pulse-complete {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+/* Timer button row */
+.timer-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timer-controls button {
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #2d3148;
+  background: #252840;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  /* aria-label attributes are set directly in index.html */
+}
+
+.timer-controls button:hover:not(:disabled) {
+  background: #333660;
+}
+
+.timer-controls button:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.timer-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   To-Do List Widget  (#todo-list)
+   ============================================================ */
+
+/* Add-task form */
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #2d3148;
+  background: #0f1117;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  /* aria-label="New task text" is set in app.js */
+}
+
+.todo-input::placeholder {
+  color: #4a5568;
+  opacity: 1; /* Firefox normalisation */
+}
+
+.todo-input:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 1px;
+}
+
+/* Task list */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Individual task row */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  background: #252840;
+  transition: background 0.1s;
+}
+
+.todo-item:hover {
+  background: #2d3060;
+}
+
+/* ── Completed task styling (Req 3.4) ──────────────────────
+   text-decoration: line-through  +  reduced opacity.
+   Color shift provides an additional visual cue
+   (not the sole indicator — WCAG safe). ──────────────────── */
+.todo-item--completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.45;
+  color: #718096;
+}
+
+.todo-checkbox {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: #a78bfa;
+  /* aria-label set dynamically per task in app.js */
+}
+
+.todo-checkbox:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 0.875rem;
+  word-break: break-word;
+}
+
+/* Inline edit input */
+.todo-edit-input {
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #a78bfa;
+  background: #0f1117;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  /* aria-label="Edit task text" is set in app.js */
+}
+
+.todo-edit-input::placeholder {
+  color: #4a5568;
+  opacity: 1;
+}
+
+.todo-edit-input:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 1px;
+}
+
+/* Shared todo button base */
+.todo-btn {
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #2d3148;
+  background: #333660;
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  /* aria-labels are set per-button in app.js */
+}
+
+.todo-btn:hover {
+  background: #3d4280;
+}
+
+.todo-btn:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+/* Add button variant */
+.todo-btn--add {
+  background: #4c3d8f;
+  border-color: #6b5bbe;
+}
+
+.todo-btn--add:hover {
+  background: #5a4aa8;
+}
+
+/* Delete button variant */
+.todo-btn--delete {
+  background: #4a1c1c;
+  border-color: #742020;
+  color: #feb2b2;
+}
+
+.todo-btn--delete:hover {
+  background: #5c2020;
+}
+
+/* Confirm (save edit) button variant */
+.todo-btn--confirm {
+  background: #1a4731;
+  border-color: #276749;
+  color: #9ae6b4;
+}
+
+.todo-btn--confirm:hover {
+  background: #1f5738;
+}
+
+/* Cancel edit button — inherits .todo-btn base */
+
+/* ============================================================
+   Quick Links Widget  (#quick-links)
+   ============================================================ */
+
+/* Add-link form */
+.ql-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.ql-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ql-label {
+  font-size: 0.75rem;
+  color: #7c8db5;
+  font-weight: 500;
+}
+
+.ql-input {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #2d3148;
+  background: #0f1117;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  /* aria-label="Link label" / "Link URL" set in app.js */
+}
+
+.ql-input::placeholder {
+  color: #4a5568;
+  opacity: 1;
+}
+
+.ql-input:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 1px;
+}
+
+/* Inline validation error (Req 4.2) */
+.ql-error {
+  font-size: 0.75rem;
+  color: #fc8181;
+  /* role="alert" is set in app.js so screen readers announce it */
+}
+
+.ql-add-btn {
+  align-self: flex-start;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #6b5bbe;
+  background: #4c3d8f;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  /* aria-label="Add link" is set in app.js */
+}
+
+.ql-add-btn:hover {
+  background: #5a4aa8;
+}
+
+.ql-add-btn:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+/* Links list */
+.ql-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ql-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Link button — opens URL in a new tab (Req 4.5) */
+.ql-link-btn {
+  flex: 1;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #2d3148;
+  background: #252840;
+  color: #93c5fd;
+  font-size: 0.875rem;
+  text-decoration: none;
+  word-break: break-all;
+  transition: background 0.15s;
+  /* aria-label="Open <label>" is set in app.js */
+}
+
+.ql-link-btn:hover {
+  background: #2f3460;
+  text-decoration: underline;
+}
+
+.ql-link-btn:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+/* Delete link button */
+.ql-delete-btn {
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #742020;
+  background: #4a1c1c;
+  color: #feb2b2;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  line-height: 1;
+  /* aria-label="Delete link: <label>" is set in app.js */
+}
+
+.ql-delete-btn:hover {
+  background: #5c2020;
+}
+
+.ql-delete-btn:focus-visible {
+  outline: 2px solid #fc8181;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Print  — simple single-column layout
+   ============================================================ */
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  main > section {
+    border: 1px solid #ccc;
+    background: #fff;
+    max-height: none;
+    page-break-inside: avoid;
+  }
+}
